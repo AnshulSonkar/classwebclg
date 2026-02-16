@@ -29,7 +29,10 @@
 // });
 
 
-/* Cursor Light Follow */
+
+
+
+/* Cursor Light Follow *
 
 const light = document.querySelector('.cursor-light');
 
@@ -39,7 +42,7 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-/* Scroll Reveal */
+/* Scroll Reveal *
 
 const sections = document.querySelectorAll('.section');
 
@@ -50,4 +53,37 @@ window.addEventListener('scroll', () => {
             section.classList.add('active');
         }
     });
+}); */
+
+
+
+/*intelligent interface */
+
+const glow = document.querySelector(".cursor-glow");
+const title = document.getElementById("mainTitle");
+const subtitle = document.getElementById("subtitle");
+
+document.addEventListener("mousemove", (e) => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
 });
+
+function changeTopic(topic) {
+
+  if (topic === "ai") {
+    title.textContent = "Artificial Intelligence";
+    subtitle.textContent = "Learning • Adapting • Predicting";
+  }
+
+  else if (topic === "web") {
+    title.textContent = "Modern Web";
+    subtitle.textContent = "Responsive • Dynamic • Interactive";
+  }
+
+  else if (topic === "systems") {
+    title.textContent = "Core Systems";
+    subtitle.textContent = "Optimized • Structured • Scalable";
+  }
+
+}
+

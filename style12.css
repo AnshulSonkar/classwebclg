@@ -179,7 +179,9 @@ body {
     letter-spacing: 3px;
 }
 
-/* BASE */
+
+
+/* BASE 
 
 body {
     margin: 0;
@@ -189,7 +191,7 @@ body {
     overflow-x: hidden;
 }
 
-/* CURSOR LIGHT */
+/* CURSOR LIGHT 
 
 .cursor-light {
     position: fixed;
@@ -201,7 +203,7 @@ body {
     z-index: 0;
 }
 
-/* HERO */
+/* HERO 
 
 .hero {
     height: 100vh;
@@ -223,7 +225,7 @@ body {
     letter-spacing: 3px;
 }
 
-/* SECTION BASE */
+/* SECTION BASE 
 
 .section {
     padding: 100px 10%;
@@ -237,7 +239,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* CARDS */
+/* CARDS 
 
 .card-container {
     display: flex;
@@ -260,13 +262,13 @@ body {
     padding: 60px 100px;
 }
 
-/* Hover Effect */
+/* Hover Effect 
 .card:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow: 0 0 40px rgba(0,255,255,0.2);
 }
 
-/* SCROLL REVEAL */
+/* SCROLL REVEAL 
 
 .section {
     opacity: 0;
@@ -277,4 +279,92 @@ body {
 .section.active {
     opacity: 1;
     transform: translateY(0);
+} */
+
+
+/* intelligent interface  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f1a, #12122a, #0e1c2f);
+  overflow: hidden;
+  color: white;
+}
+
+/* Background animation */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, #1e90ff33, transparent 40%),
+              radial-gradient(circle at 70% 60%, #00ffcc22, transparent 40%);
+  animation: moveBg 12s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-20%, -20%); }
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+  transition: 0.4s ease;
+}
+
+p {
+  font-size: 18px;
+  color: #ccc;
+  transition: 0.4s ease;
+}
+
+.topics {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1px solid #00ffff;
+  background: transparent;
+  color: #00ffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00ffff;
+  color: black;
+  transform: translateY(-3px);
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #00ffff33, transparent 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
